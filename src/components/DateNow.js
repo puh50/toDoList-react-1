@@ -18,8 +18,8 @@ export default function DateNow() {
     };
 
     const getDate = () => {
-        const day = (dateNow.getDay() < 10) ? '0' + dateNow.getDay() : dateNow.getDay();
-        const month = (dateNow.getMonth() < 10) ? '0' + dateNow.getMonth() : dateNow.getMonth();
+        const day = (dateNow.getDate() < 10) ? '0' + dateNow.getDate() : dateNow.getDate();
+        const month = ((dateNow.getMonth() + 1) < 10) ? '0' + (dateNow.getMonth() + 1) : dateNow.getMonth() + 1;
         const year = (dateNow.getFullYear() < 10) ? '0' + dateNow.getFullYear() : dateNow.getFullYear();
         return year + '/' + month + '/' + day;
     }
